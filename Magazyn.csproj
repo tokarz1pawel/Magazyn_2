@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Cart\Controllers\" />
+    <Folder Include="Areas\Cart\Data\" />
+    <Folder Include="Areas\Cart\Models\" />
+    <Folder Include="Areas\Cart\Views\" />
     <Folder Include="Views\Account\" />
   </ItemGroup>
 
