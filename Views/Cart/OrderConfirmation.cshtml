@@ -1,0 +1,25 @@
+﻿@model Magazyn.Models.Orders
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <h1>Your order has been placed successfully!</h1>
+    <h2>Order Details:</h2>
+    <ul>
+        <li>Order ID: @Model.Id</li>
+        <li>Total Price: @Model.TotalPrice</li>
+        <li>Status: @Model.Status</li>
+        <li>Order Date: @Model.CreatedAt</li>
+    </ul>
+    <h2>Order Items:</h2>
+    <ul>
+        @foreach (var item in Model.OrderItems)
+        {
+            <li>Product: @item.Products.Name, Quantity: @item.Quantity, Price: @item.Price</li>
+        }
+    </ul>
+</body>
+</html>

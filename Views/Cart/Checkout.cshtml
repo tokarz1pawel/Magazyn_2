@@ -1,0 +1,27 @@
+﻿@model Magazyn.Models.Orders
+
+<h2>Order Confirmation</h2>
+
+<p>Thank you for your order! Your order has been placed successfully.</p>
+
+<h3>Order Details:</h3>
+<table class="table">
+    <tr>
+        <td><strong>Order ID:</strong></td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td><strong>Total Amount:</strong></td>
+        <td>$@Model.TotalPrice</td>
+    </tr>
+    <tr>
+        <td><strong>Status:</strong></td>
+        <td>@Model.Status</td>
+    </tr>
+    <tr>
+        <td><strong>Order Date:</strong></td>
+        <td>@Model.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+    </tr>
+</table>
+
+<p>If you have any questions or concerns, please contact our customer support.</p>
