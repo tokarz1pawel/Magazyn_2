@@ -55,7 +55,6 @@ public class CartController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-
     [Authorize]
     public async Task<IActionResult> Checkout()
     {
@@ -70,13 +69,16 @@ public class CartController : Controller
             return View("EmptyCart");
         }
 
+        // Pobierz zalogowanego użytkownika
+        var user = await _userManager.GetUserAsync(User);
+
         // Możesz dodać logikę do obliczania całkowitej ceny zamówienia na podstawie zawartości koszyka
         double totalAmount = cartItems.Sum(ci => ci.Products.Price * ci.Quantity);
 
         // Tworzenie nowego zamówienia
         var order = new Orders
         {
-            // UserId = "user_id", // Usuń to pole lub pozostaw puste dla braku autoryzacji
+            UserId = user.Id, // Przypisz UserId do zamówienia
             TotalPrice = totalAmount,
             Status = "Pending", // Możesz ustawić status zamówienia
             CreatedAt = DateTime.Now,
@@ -109,4 +111,5 @@ public class CartController : Controller
         // Przykład: Zwróć widok potwierdzenia zamówienia wraz z informacjami o zamówieniu
         return View("OrderConfirmation", order);
     }
+
 }

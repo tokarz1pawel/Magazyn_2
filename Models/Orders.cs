@@ -11,6 +11,10 @@ namespace Magazyn.Models
         [Key]
         public int Id { get; set; }
 
+        // Dodaj UserId jako pole
+        [Column(TypeName = "nvarchar(450)")] // Typ danych odpowiadający kluczowi głównemu w tabeli AspNetUsers
+        public string UserId { get; set; }
+
         [ForeignKey("UserId")]
         public IdentityUser User { get; set; }
 
