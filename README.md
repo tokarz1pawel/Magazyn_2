@@ -1,22 +1,22 @@
-Wymagania:
+### Wymagania:
 1. Serwer Mssql
 2. .NET 8.0
 
-Opis instalacji:
+### Opis instalacji:
 1. Uruchom program Visual Studio.
 2. Sklonuj repozytorium z Githuba.
-3. W pliku appsettings.json w "DefaultConnection": "Server= przypisz nazwÍ swojego serwera Mssql.
+3. W pliku appsettings.json w "DefaultConnection": "Server= przypisz nazwƒô swojego serwera Mssql.
 4. Uruchom Serwer Mssql.
 5. Uruchom aplkacje.
 
-Dane testowe uøytkownikÛw:
+### Dane testowe u≈ºytkownik√≥w:
 Konto Administratora
 email - admin@example.com
-has≥o - admin123A!
+has≈Ço - admin123A!
 
-Konto uøytkownika:
+### Konto u≈ºytkownika:
 email - user@example.com
-has≥o - user123A!
+has≈Ço - user123A!
 
-Opis dzia≥ania aplikacji:
-Aplikacja s≥uøy do zarzπdzania zamÛwieniami i magazynem. Uøytkownicy wybierajπ produkty z listy dostÍpnych i dodajπ je do koszyka, a nastÍpnie sk≥adajπ zamÛwienie. Uøytkownik z uprawnieniami administratora moøe dodawaÊ przedmioty do listy oraz je edytowaÊ. Aplikacja obs≥uguje logowanie i rejestracje.
+### Opis dzia≈Çania aplikacji:
+Aplikacja s≈Çu≈ºy do zarz≈°dzania zam√≥wieniami i magazynem. U≈ºytkownicy wybieraj≈° produkty z listy dostƒôpnych i dodaj≈° je do koszyka, a nastƒôpnie sk≈Çadaj≈° zam√≥wienie. U≈ºytkownik z uprawnieniami administratora mo≈ºe dodawaƒá przedmioty do listy oraz je edytowaƒá. Aplikacja obs≈Çuguje logowanie i rejestracje.
